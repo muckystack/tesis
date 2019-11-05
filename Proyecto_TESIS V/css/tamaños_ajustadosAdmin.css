@@ -106,11 +106,11 @@
 @media screen and (max-width: 1343px) {
 	/*estilo del cuadro del buscador*/
 	.form .form-bucador{
-		font-size: 16px;
+		font-size: 8px;
 		border-radius:5px;
 		float:flex;
 		margin-left: 70%;
-		text-align: left;
+		text-align: center;
 	}
 	/*estilo del botón Buscar*/
 	.wrap .form .btn-buscar{
@@ -169,14 +169,14 @@
 		padding: 2px 10px;
 	}
 }
-@media screen and (max-width: 1128px) {
+@media screen and (max-width: 1031px) {
 	/*estilo del cuadro del buscador*/
 	.form .form-bucador{
 		font-size: 16px;
 		border-radius:5px;
 		float:flex;
 		margin-left: -2%;
-		text-align: left;
+		text-align: center;
 	}
 	/*estilo del botón Buscar*/
 	.wrap .form .btn-buscar{
@@ -189,6 +189,9 @@
 		border: 0px;
 		margin: 2px 2px;
 		padding: 2px 10px;
+	}
+	td{
+		
 	}
 }
 @media screen and (max-width: 800px) {

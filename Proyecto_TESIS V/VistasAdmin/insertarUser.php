@@ -1,39 +1,41 @@
 <?php
-	include('conexionGeneral.php');
 
-	if (isset($_POST['Nombre'])) { // SI EXISTE LOS CAMPOS
-		// ae toman los id de cada input (campo)
-		$Nombre = $_POST['Nombre'];
-		$Apellido = $_POST['Apellido'];
-		$Telefono = $_POST['Telefono'];
-		$Password = sha1($_POST["Password"]); //  encripta los datos al eviarlos
-		$Rol = $_POST['Rol'];
-		$Salary = $_POST['Salario'];
+  include('conexionGeneral.php');
+/*
+if (isset($ _POST['submit'])) { // SI EXISTE LOS CAMPOS
+  // ae toman los id de cada input (campo)
+  $Nombre = $ _POST['#nombre'];
+  $Apellido = $ _POST['#apellido'];
+  $Telefono = $ _POST['T#telefono'];
+  $Password = sha1($ _POST['#password']); //  encripta los datos al eviarlos
+  $Rol = $ _POST['#rol'];
+  $Salary = $ _POST['#salario'];
 
-		$query = "INSERT INTO usuarios(`nombre`, `apellido`, `telefono`, `password`, `rol`, `pago_semanal`) VALUES(
-				'$Nombre',
-				'$Apellido',
-				'$Telefono',
-				'$Password',
-				'$Rol',
-				 $Salary
-			)";
-			$result = mysqli_query($connection, $query);
-			if (!$result) {
-				die('El usuario no pudo se pudo agregar');
-			}
-			
-		alert('Usuario Agregado Exitosamente!!!');
-	}
+	$query = "INSERT INTO usuarios(`nombre`, `apellido`, `telefono`, `password`, `rol`, `pago_semanal`) VALUES(
+								  '$Nombre',
+								  '$Apellido',
+								  '$Telefono',
+								  '$Password',
+								  '$Rol',
+								   $Salary
+	)";
 
+	$result = mysqli_query($connection, $query);
+	
+	if (!$result) {
+	  die('El usuario no pudo se pudo agregar');
+	}			
+  echo 'Usuario Agregado Exitosamente!!!';
+}
+*/
 
-	/*contraseña autocrementable
-		$Nombre  =$_POST["Nombre"];
-		$Apellido=$_POST["Apellido"];
-		$Telefono=$_POST["Telefono"];
-		$Password=sha1$_POST["Password"]; // sha1 encripta los datos al eviarlos
-		$Rol	 =$_POST["Rol"];
-		$Salario =$_POST["Salario"];
+	contraseña autocrementable
+		$Nombre  =$_POST["nombre"];
+		$Apellido=$_POST["apellido"];
+		$Telefono=$_POST["telefono"];
+		$Password=sha1$_POST["password"]; // sha1 encripta los datos al eviarlos
+		$Rol	 =$_POST["rol"];
+		$Salario =$_POST["salario"];
 
 		$insertarDatos $insertarDatos = "INSERT INTO usuarios (nombre, apellido, telefono, password, rol, pago_semanal) VALUES(	
 														'$Nombre',
@@ -48,5 +50,5 @@ if ($insertarDatos == true) {
 	alert("Fallo al agregar Usuario");
 }
 		//echo mysql_query($conexion, $sql); //arroja los valosres si 1 se conecto y 0 si NO se conecto
-*/
+
 ?>

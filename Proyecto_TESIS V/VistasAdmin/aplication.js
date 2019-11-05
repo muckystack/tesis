@@ -71,7 +71,16 @@ function obtenerDatos(){
 							</td>
 								<td>${task.Apellido}</td>
 								<td>${task.Telefono}</td>
-								<td>${task.Password}</td>
+								
+								<!--td>
+								<div style="margin: auto" class="col-md-12"> 
+                        		  <div class="row">
+									<button style="color: white" class="btn">
+								 	  <span class="fa fa-eye-slash"></span>
+									</button></td>
+								  </div>
+								</div-->
+								
 								<td>${task.Rol}     </td>
 								<td>${task.Salario} </td>
 								<td>
@@ -92,7 +101,7 @@ function obtenerDatos(){
 	// Se crea la insercion de User a la tabla usuarios
 	$('#formulario').submit(e => { 
 	    e.preventDefault(); //metodo para envia la recarga y envia
-	    console.log('cliqueado buscar');
+	    //console.log('cliqueado buscar');
 
 	    
 	    const postData = { // todo se guarda en un objeto
@@ -100,18 +109,22 @@ function obtenerDatos(){
 						name: 	$('#nombre').val(),
 						Ape:  	$('#apellido').val(),
 						Tel:  	$('#telefono').val(),
-						Pass:  	$('#Password').val(),
+						Pass:  	$('#password').val(),
 						Rol:  	$('#rol').val(),
 						Salary: $('#salario').val()
-		} // objeto postData
+		}; // objeto postData
 
 	    //SI edit es Verdadero Envia los datos a InsertarUser y si es falso enviar a otra de direccion y Actualizar
 		const url = edit === false ? 'insertarUser.php' : 'tarea_edit.php';
-	    console.log(postData, url);
+	    
+	    // console.log(postData, url);
 
 	    // $.post('url a donde lo va a enviar', objeto, function(respuesta del servidor) {});
 	    $.post(url, postData, (response) => {
-	      console.log(response);
+
+	      console.log(postData);
+	      
+
 	      $('#formulario').trigger('reset'); //RESETEA EL FORMULARIO
 	       
 	      obtenerDatos(); // cada vez que se agregue uno se actualizará la tabla de la derecha
@@ -126,7 +139,9 @@ function obtenerDatos(){
 		// se selecciona mediante el id, se busca de manera al elemento padre 
 		const element = $(this)[0].activeElement.parentElement.parentElement;
     	const id = $(element).attr('taskId');
-		console.log(element);
+
+		console.log(element, id);
+		
 		$.post('actualizarUser.php', id, (response) => {
 			console.log(response); // Muestra lo que recibe del php Backend
 
