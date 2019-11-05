@@ -2,7 +2,7 @@ $(document).ready(function() {
 // Variable negada para comprobación de la actualización NO SE ESTA Editando registro
 let edit = false;
 
-console.log('JQuerty Funcionando');
+//console.log('JQuerty Funcionando');
 obtenerDatos(); // EJECUTA LA funcion para obtemer datos automaticos
 
 $('#resultsSearch').hide(); // Se oculta el contenedor cuando inicia
@@ -20,7 +20,7 @@ $('#resultsSearch').hide(); // Se oculta el contenedor cuando inicia
 
 			        if(!response.error) {
 
-			            let tasks = JSON.parse(response);
+			            const tasks = JSON.parse(response);
 			            let template = ''; //platilla para rellenar
 
 			            tasks.forEach(task => { //RECORRE LA TAREA (BUSQUEDA)
@@ -126,10 +126,8 @@ function obtenerDatos(){
 		// se selecciona mediante el id, se busca de manera al elemento padre 
 		const element = $(this)[0].activeElement.parentElement.parentElement;
     	const id = $(element).attr('taskId');
-
-		console.log(id);
-
-		$.post('actualizarUser.php', {id}, (response) => {
+		console.log(element);
+		$.post('actualizarUser.php', id, (response) => {
 			console.log(response); // Muestra lo que recibe del php Backend
 
 			const tasks = JSON.parse(response);

@@ -18,7 +18,7 @@ if(!empty($search)) {
   $json = array();
 		while ($row = mysqli_fetch_array($result) ) {
 			$json[] = array(
-				'Id' => $row['id'],
+				'Id' => $row['Id_Usuario'],
 				'nombre' => $row['nombre'],
 				'apellido' => $row['apellido'],
 				'telefono' => $row['telefono'],

@@ -1,19 +1,7 @@
 <?php 
-	$servidor="localhost"; // Nombre o direccion del servidor
-	$usuario="root"; // Tipo de usuario
-	$clave=""; // Contraseña o clave de usuario
-	$baseDeDatos="verduras_y_frutas"; // Nombre de la base de datos
 
-	// Enlace de conexion
-		$connection = mysqli_connect($servidor, $usuario, $clave, $baseDeDatos);
-
-		//mysqli_set_charset($connection, "utf8");
-//test de connection
-//	if(!$connection){
-//		echo"Error en la conexion con el servidor";
-//	}
-//	echo"conexión establecida con el servidor";
-
+	include('conexionGeneral.php');
+	
 ////////////////////	Conexion a la base de DATOS		/////////////////////////////
 
 

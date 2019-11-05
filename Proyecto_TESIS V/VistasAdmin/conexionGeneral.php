@@ -13,5 +13,5 @@
 	if(!$connection){
 		echo"Error en la conexion con el servidor";
 	}
-	//echo"conexión establecida con el servidor";
+	// echo"conexión establecida con el servidor";
 ?>
