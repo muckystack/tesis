@@ -1,0 +1,125 @@
+/*----------------------- inicio reset y fondo -----------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*----------------------- INICIO estilo de titulos de separación -----------------------*/
+	.Text_FlechaIZQ{ /*Flecha para dirigirse a Verduras */
+		display: none;
+	}
+	.Text_FlechaDER{ /*Flecha para dirigirse a Frutas */
+		display: none;
+	}
+h1{
+	margin: auto;
+	text-align: center;
+	margin-top: 8px;
+	color: #ADF3FA;/*#533979;*/
+	margin-bottom: 8px;
+	font-size: 20px;
+}
+
+/* INICIO icono del titulo de la tabla */
+a{
+	text-decoration: none;
+}
+/* FIN icono del titulo de la tabla */
+/*----------------------- FIN estilo de titulos de separación -----------------------*/
+
+
+/*----------------------- INICIO estilo del espaciado de la tabla -----------------------*/
+div#General{
+	margin: auto;
+	width: 100%;/*1350px;*/
+	height: 100%;
+	margin-top: 1px; /* Da un espacio hacia bajo */
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-bottom: 1px;
+	display: inline-flex; /* centra los 2 DIV´s div#TablaFruta & div#TablaVerdura*/
+}
+/*----------------------- FIN estilo del espaciado de la tabla -----------------------*/
+/*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+div#TablaVerdura{ /*div secundario*/
+	margin: auto;
+	width: 50%;/*675px;*/
+	height: 100%;
+	border: none;
+}
+div#TablaFruta{ /*div primario*/
+	margin: auto;
+	width: 50%;/*675px;*/
+	height: 100%;
+}	
+/*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+
+
+/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+.tex{/*efecto de letras en pantalla grande*/
+	text-decoration: none;
+	font-size: 10px;
+	text-align: center; /* CENTRA EL TEXTO */
+	overflow: hidden; /* No deja que se salga */
+	color: #3E0946;
+}
+/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+/*----------------------- INICIO centra las tablas -----------------------*/
+table{
+	margin: auto;
+	border-radius: 15PX;
+	border: none;
+}
+td{
+	width: 150px; /* dibujado de hanchura del recuadro */
+	height: 160px; /* dibujado de altura del recuadro */
+	border: none;
+}
+/*----------------------- FIN centra las tablas -----------------------*/
+
+/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+.element_product{
+	margin: auto;
+	width: 140px; /* dibujado de hanchura del recuadro */
+	height: 125px; /* dibujado de altura del recuadro */
+	border-radius: 15PX;
+}
+.image_product{ /*estilo de la img_product ajustada al cuadro*/
+	margin: auto;
+	width: 130px;
+	height: 115px;
+	align-items: center;
+	position: static;
+	border-radius: 15PX;
+	/*border-bottom: 3px solid #ff851b; /* color de franja color de la letra */
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+
+
+/*----------------------- INICIO efecto de la etiquetas div.element_product & a  -----------------------*/
+
+td:hover{/*efecto color y fondo universal*/
+	background: rgba(254, 254, 254, .8); /* color degradado del fondo del recuadro */
+	color: #3E0946; /*color de letra para cuadro*/
+	font-size: 22px;
+	display: inline-block;/* centra la letra en la parte de bajo de la img*/
+	cursor: pointer; /*-	cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+	border-radius: 15PX;
+}
+td h4:hover{/*efecto de tamaño de imagen en pantalla grande*/
+	align-items: center;
+	border-radius: 15PX;
+	text-align: center;
+	overflow: hidden; /*No deja que salga de lo establecido*/
+	display: block;
+	cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+}
+/*----------------------- FIN efecto de la etiqueta a -----------------------*/

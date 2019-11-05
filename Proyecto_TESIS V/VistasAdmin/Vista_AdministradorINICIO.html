@@ -1,0 +1,2867 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- Permite crear un efecto RESPOSIVE -->
+	<title>vista Administrador INICIO</title>
+
+<!-- Ultima versión de la libreria JQuery
+    <script src="http://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+-->
+<!--llamado de la libreria Jquery-->
+<script src="../JS/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../css/Estilos Boostrap/bootstrap.min.css">
+<!--llamado de la libreria Boostrap Online--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"-->
+
+<!--Estilos para menu pegable y fondo-->
+<link rel="stylesheet" href="../css/Estilo_Admin.css">
+<!--Estilos para tabla producto-->
+<link rel="stylesheet" href="../css/estiloProductos_tabla.css">
+<!-- enlaza el archivo css de los iconos -->
+<link rel="stylesheet" href="../Iconos/font-awesome.css">
+    
+    <!-- enlaza el archivo css de los botones de ayuda mensageInfo -->
+    <link rel="stylesheet" href="../css/mensageInfo.css">
+
+    <!-- enlaza el script de activacion de los registros y ocultacion de ventanas -->
+    <script src="../js/registro_producto.js"></script>
+    <script src="../js/ocultarInfo.js"></script>
+    
+
+    <script> //Scrip unico de un registro
+          /* funcion de Abrir la registro Mango tomy */
+    function AbrirMANGO_TOMMY(){
+        document.getElementById("OpenMANGO_TOMMY").style.display="block";
+
+        document.getElementById("InfoMANGO_TOMMY").style.display="block";
+    }
+    /* funcion de cerrar la Registro Mango tomy */
+    function closeMANGO_TOMMY(){
+        document.getElementById("OpenMANGO_TOMMY").style.display="none";
+    }
+    </script>
+    <!-- enlaza el archivo css de los diferentes tamaños ->
+    <link rel="stylesheet" href="../css/tamaños_ajustadosAdmin.css"-->
+
+</head>
+<body>
+	
+	<div class="wrap"><!-- inicio DEL MENU PEGABLE -->
+			<ul class="tabs">
+				
+				<li><a href="VistaCajas_Registradoras.html">
+					<span class="fa fa-cubes"></span>
+					<span class="txt_menu">Cajas Registradoras</span>
+				</a></li>
+
+				
+				<li><a href="VistaAlmacen.html">
+					<span class="fa fa-folder-open"></span>
+					<span class="txt_menu">Almacen</span>
+				</a></li>
+
+				
+				<li><a href="VistaVentas.html">
+					<span class="fa fa-dollar"></span>
+					<span class="txt_menu">Ventas</span>
+				</a></li>
+			</ul>
+	</div> <!-- FIN DEL MENU PEGABLE -->
+
+		<!--diversas pantallas para el menú sin cambiar de página web -->
+
+<!-- PRIMER PANTALLA -->
+			<!--div id="AbreVent1" class="fondoFlotante"> <!-- FONDO y abrir() ->
+				<div id="Info1" class="ventanaFlotante">
+			    <a href="javascript:closevent1()">
+			        <span id="cerrar" class="fa fa-close"> </span>
+			    </a>
+			    	<p>
+			        <h5>INICIO</h5>
+			            <br>
+                        Puede agregar nueva compra de producto comprado al proveedor para realizar un registro de compra de mayor precición de sus gastos a la hora de comprar nuevo producto.
+                        <br><br>
+                        Para agregar precio que sea verificado automaticamente debe de dar clic en una imagen y agregar los precios por kilo, caja, mayoreo
+                        
+			        </p>
+			    </div--><!-- FIN DE LA INFO DEL BOTÓN ->
+			</div> <!- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<!-- apartado del buscador -->
+<nav class="navbar navbar-expand-lg ml-auto"><!--INICIO NAVEGACION-->
+    <div style="text-align: center">
+        <i>¡Hola Administrador!</i>
+    </div>
+
+    <a type="submit" href="Registro/AgregarCompraNueva.html" class="btn btn-Primary  text-center btn btn-outline-info">
+        Agregar Compra / Gastos Adicionales 
+    </a>
+</nav><!--FIN NAVEGACION-->
+
+            <!---------- INICIO de dibujado de la tabla limpia ---------->    
+
+<div id="General"><!--Inicio de Div General-->
+
+    <!--TABLA 1 Frutas -->
+    <div id="TablaFruta"><!--Inicio de Div primero-->
+        <!--INICIO DE LA FLECHA QUE CAMBIA A LA TABLA FRUTA -->
+        <h1 class="Text_FlechaIZQ">
+            <a href="javascript:OpenFruta()">
+            VERDURAS
+                <span class="fa fa-arrow-right"></span>
+            </a>
+        <!--FIN DE LA FLECHA QUE CAMBIA A LA TABLA FRUTA -->
+        </h1>
+
+        
+        <table border="1px" class="table-responsive-sm"><!-- INICIO del Table Verdura-->
+            <tr><!-- Representa un renglón-->
+                <td id="Jitomate"><!-- Representa una celda -->
+                    <a href="javascript:AbrirJITOMATE()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/Jitomate.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Jitomate</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Tomate"><!-- Representa una celda -->
+                    <a href="javascript:AbrirTOMATE()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/tomate.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Tomate</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Lechuga"><!-- Representa una celda -->
+                    <a href="javascript:AbrirLECHUGA()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/lechuga.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Lechuga</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Col"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCOL()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/col.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Col</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Zanahoria"><!-- Representa una celda -->
+                    <a href="javascript:AbrirZANAHORIA()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/zanahoria.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Zanahoria</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Calabaza"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCALABAZA()">
+
+                   <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/calabacitas.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Calabacitas</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chayote"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHAYOTE()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chayote.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chayote</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Papa"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPAPA()">
+
+                   <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/papa.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Papa</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Cebolla_Sin_Rabo"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCEBOLLA_SIN_RABO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/cebolla sin rabo.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Cebolla Sin Rabo</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Cebolla_Con_Rabo"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCEBOLLA_CON_RABO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/cebolla con rabo.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Cebolla Con Rabo</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Limon"><!-- Representa una celda -->
+                    <a href="javascript:AbrirLIMON()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/limon.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Limón</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Morron"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_MORRON()">
+
+                   <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile morron.png" class="img-fluid">
+                        </div>
+                    </span> 
+                    <span class="tex">
+                        <h4>Chile Morrón</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Chile_Cerrano"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_CERRANO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile cerrano.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Cerrano</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Jalapeño"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_JALAPEÑO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile jalapeño.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Jalapeño</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Poblano"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_POBLANO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile poblano.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Poblano</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Hungaros"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_HUNGARO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile hungaro.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Hungaro</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Chile_Caloro"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_COLORO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile coloro.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Caloro</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Brocoli"><!-- Representa una celda -->
+                    <a href="javascript:AbrirBROCOLI()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/brocoli.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Brocoli</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Coliflor"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCOLIFLOR()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/coliflor.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Coliflor</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Apio"><!-- Representa una celda -->
+                    <a href="javascript:AbrirAPIO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/apio.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Apio</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Rabano"><!-- Representa una celda -->
+                    <a href="javascript:AbrirRABANO()">
+
+                   <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/rabano.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Rabano</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Champinion"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHAMPINION()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/champinion.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Champinión</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Acelga"><!-- Representa una celda -->
+                    <a href="javascript:AbrirACELGA()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/acelga.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Acelga</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Espinacas"><!-- Representa una celda -->
+                    <a href="javascript:AbrirESPINACAS()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/espinacas.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Espinacas</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Cilantro"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCILANTRO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/cilantro.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Cilantro</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Nopal"><!-- Representa una celda -->
+                    <a href="javascript:AbrirNOPAL()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/nopal.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Nopal</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Guajillo"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_CASCABEL_GUAJILLO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile cascabel guajillo.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Guajillo (Cascabel)</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Negro"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_NEGRO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile negro.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Negro</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Chile_Morita"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_MORITA()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile morita.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Morita</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_Piquin"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_PIQUIN()">
+
+                   <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile piquin.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile Piquin</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Ajo"><!-- Representa una celda -->
+                    <a href="javascript:AbrirAJO()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/ajo.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Ajo</h4>
+                    </span>
+
+                    </a>
+                </td>
+
+                <td id="Chile_de_Guizar"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCHILE_DE_GUIZAR()">
+
+                    <span class="verdura">
+                        <div class="element_product">
+                            <img src="../image_product/chile de guizar.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Chile de Guizar</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+        </table><!-- FIN del Table Verdura-->
+
+    </div><!-- FIN de Div primero-->
+
+    <!--TABLA 2 Frutas -->
+    <div id="TablaVerdura"><!-- INICIO de Div secundario-->
+        <!--INICIO DE LA FLECHA QUE OCULTA LA TABLA FRUTA -->
+        <h1 class="Text_FlechaDER">
+            <a href="javascript:CloseFruta()">
+                <span class="fa fa-arrow-left"></span>
+                FRUTAS
+            </a><!--FIN DE LA FLECHA QUE OCULTA LA TABLA FRUTA -->
+        </h1>
+
+        <table id="Tabla2" class="table-responsive-sm"> <!-- INICIO del div Fruta-->
+            <tr><!-- Representa un renglón-->
+                <td id="Naranja"><!-- Representa una celda -->
+                    <a href="javascript:AbrirNARANJA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/naranja.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Naranja</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Mandarina"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANDARINA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/mandarina.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Mandarina</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Mango_Geidy"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANGO_GEIDY()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/mango heidi.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Mango Heidi</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Mango_Tommy"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANGO_TOMMY()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/mango tommy.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Mango Tommy</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Mango_Atadulfo"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANGO_ATADULFO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/mango atadulfo.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Mango Atadulfo</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Mango_Manililla"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANGO_MANILLILLA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/mango manililla.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Mango Manililla</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Papaya"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPAPAYA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/papaya.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Papaya</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Platano"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPLATANO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/platano.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Platano</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Platano_Dominico"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPLATANO_DOMINICO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/platano dominico.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Platano Dominico</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Sandia"><!-- Representa una celda -->
+                    <a href="javascript:AbrirSANDIA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/sandia.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Sandia</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Pepino"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPEPINO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/pepino.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Pepino</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Jicama"><!-- Representa una celda -->
+                    <a href="javascript:AbrirJICAMA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/jicama.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Jicama</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Pina"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPIÑA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/piña.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Piña</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Melon_Chino"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMELON_CHINO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/melon chino.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Melón Chino</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Melon_Blanco"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMELON_BLANCO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/melon blanco.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Melón Blanco</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Durazno"><!-- Representa una celda -->
+                    <a href="javascript:AbrirDURAZNO()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/durazno.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Durazno</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Durazno_Nectarin"><!-- Representa una celda -->\
+                    <a href="javascript:AbrirDURAZNO_NECTARIN()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/durazno nectarin.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Durazno Nectarin</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Manzana_Gala"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANZANA_GALA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/manzana gala.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Manzana Gala</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Manzana_Delicia"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANZANA_DELICIA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/manzana delicia.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Manzana Delicia</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Manzana_Golden"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANZANA_GOLDEN()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/manzana golden.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Manzana Golden</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Manzana_Amarilla_Mx"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANZANA_AMARILLA_MX()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/manzana amarilla mx.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Manzana Amarilla Mx</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Manzana_Roja_Mx"><!-- Representa una celda -->
+                    <a href="javascript:AbrirMANZANA_ROJA_MX()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/manzana roja mx.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Manzana Roja Mx</h4>
+                    </span>
+                    </a>
+                </td>
+                <td id="Aguacate"><!-- Representa una celda -->
+                    <a href="javascript:AbrirAGUACATE()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/aguacate.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Aguacate</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Uva"><!-- Representa una celda -->
+                    <a href="javascript:AbrirUVA()">
+
+                   <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/uva.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Uva</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Tuna"><!-- Representa una celda -->
+                    <a href="javascript:AbrirTUNA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/tuna.png" class="img-fluid">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Tuna</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Guayaba"><!-- Representa una celda -->
+                    <a href="javascript:AbrirGUAYABA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/guayaba.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Guayaba</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Pera"><!-- Representa una celda -->
+                    <a href="javascript:AbrirPERA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/pera.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Pera</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Fresa"><!-- Representa una celda -->
+                    <a href="javascript:AbrirFRESA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/fresa.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Fresa</h4>
+                    </span>
+
+                    </a>
+                </td>
+            </tr>
+
+            <tr><!-- Representa un renglón-->
+                <td id="Cana"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCAÑA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/caña.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Caña</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <td id="Ciruela"><!-- Representa una celda -->
+                    <a href="javascript:AbrirCIRUELA()">
+
+                    <span class="fruta">
+                        <div class="element_product">
+                            <img src="../image_product/Ciruela.png" class="image_product">
+                        </div>
+                    </span>
+                    <span class="tex">
+                        <h4>Ciruela</h4>
+                    </span>
+
+                    </a>
+                </td>
+                <!--
+                <td><-- Representa una celda -->
+                    
+                <!--</td>-->
+                
+            </tr>
+        </table> <!-- FIN del div Fruta-->
+    </div><!-- FIN de Div Sucundario-->
+
+</div><!--div gegeral -->
+
+<br>
+<br>
+            <!---------- FIN de dibujado de la tabla ---------->
+
+
+<!---------- INICIO de Registro de Precio de Producto ---------->
+                    <!--REGISTRO PARA VERDURAS -->
+<div id="OpenJITOMATE" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoJITOMATE" class="ventanaFlotante">
+        <a href="javascript:closeJITOMATE()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Jitomate</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenTOMATE" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoTOMATE" class="ventanaFlotante">
+        <a href="javascript:closeTOMATE()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Tomate</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenLECHUGA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoLECHUGA" class="ventanaFlotante">
+        <a href="javascript:closeLECHUGA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Lechuga</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCOL" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCOL" class="ventanaFlotante">
+        <a href="javascript:closeCOL()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Col</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenZANAHORIA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoZANAHORIA" class="ventanaFlotante">
+        <a href="javascript:closeZANAHORIA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Zanahoria</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCALABAZA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCALABAZA" class="ventanaFlotante">
+        <a href="javascript:closeCALABAZA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Calabaza</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHAYOTE" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHAYOTE" class="ventanaFlotante">
+        <a href="javascript:closeCHAYOTE()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chayote</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPAPA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPAPA" class="ventanaFlotante">
+        <a href="javascript:closePAPA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Papa</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCEBOLLA_SIN_RABO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCEBOLLA_SIN_RABO" class="ventanaFlotante">
+        <a href="javascript:closeCEBOLLA_SIN_RABO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Cebolla Sin Rabo</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCEBOLLA_CON_RABO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCEBOLLA_CON_RABO" class="ventanaFlotante">
+        <a href="javascript:closeCEBOLLA_CON_RABO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Cebolla Con Rabo</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenLIMON" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoLIMON" class="ventanaFlotante">
+        <a href="javascript:closeLIMON()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>LIMÓN</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_MORRON" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_MORRON" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_MORRON()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Morrón</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_CERRANO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_CERRANO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_CERRANO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Cerrano</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_JALAPEÑO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_JALAPEÑO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_JALAPEÑO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Jalapeño</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_POBLANO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_POBLANO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_POBLANO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Poblano</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_HUNGARO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_HUNGARO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_HUNGARO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Hungaro</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_COLORO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_COLORO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_COLORO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Coloro</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenBROCOLI" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoBROCOLI" class="ventanaFlotante">
+        <a href="javascript:closeBROCOLI()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Brocoli</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCOLIFLOR" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCOLIFLOR" class="ventanaFlotante">
+        <a href="javascript:closeCOLIFLOR()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Coliflor</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenAPIO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoAPIO" class="ventanaFlotante">
+        <a href="javascript:closeAPIO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Apio</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenRABANO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoRABANO" class="ventanaFlotante">
+        <a href="javascript:closeRABANO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Rabano</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHAMPINION" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHAMPINION" class="ventanaFlotante">
+        <a href="javascript:closeCHAMPINION()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Champinión</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenACELGA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoACELGA" class="ventanaFlotante">
+        <a href="javascript:closeACELGA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Acelgas</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenESPINACAS" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoESPINACAS" class="ventanaFlotante">
+        <a href="javascript:closeESPINACAS()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Espinacas</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCILANTRO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCILANTRO" class="ventanaFlotante">
+        <a href="javascript:closeCILANTRO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Cilantro</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenNOPAL" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoNOPAL" class="ventanaFlotante">
+        <a href="javascript:closeNOPAL()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Nopal</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_CASCABEL_GUAJILLO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_CASCABEL_GUAJILLO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_CASCABEL_GUAJILLO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Guajillo (Cascabel)</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_NEGRO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_NEGRO" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_NEGRO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Negro</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_MORITA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_MORITA" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_MORITA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Morita</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_PIQUIN" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_PIQUIN" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_PIQUIN()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile Piquin</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenAJO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoAJO" class="ventanaFlotante">
+        <a href="javascript:closeAJO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Ajo</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCHILE_DE_GUIZAR" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCHILE_DE_GUIZAR" class="ventanaFlotante">
+        <a href="javascript:closeCHILE_DE_GUIZAR()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Chile de Guizar</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+
+                    <!--REGISTRO PARA FRUTAS -->
+<div id="OpenNARANJA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoNARANJA" class="ventanaFlotante">
+        <a href="javascript:closeNARANJA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Naranja</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANDARINA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANDARINA" class="ventanaFlotante">
+        <a href="javascript:closeMANDARINA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Mandarina</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANGO_GEIDY" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANGO_GEIDY" class="ventanaFlotante">
+        <a href="javascript:closeMANGO_GEIDY()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Mango Geidy</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="OpenMANGO_TOMMY" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANGO_TOMMY" class="ventanaFlotante">
+        <a href="javascript:closeMANGO_TOMMY()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Mango Tommy</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANGO_ATADULFO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANGO_ATADULFO" class="ventanaFlotante">
+        <a href="javascript:closeMANGO_ATADULFO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Mango Atadulfo</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANGO_MANILILLA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANGO_MANILILLA" class="ventanaFlotante">
+        <a href="javascript:closeMANGO_MANILILLA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Mango Manililla</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPAPAYA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPAPAYA" class="ventanaFlotante">
+        <a href="javascript:closePAPAYA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Papaya</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPLATANO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPLATANO" class="ventanaFlotante">
+        <a href="javascript:closePLATANO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Platano</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPLATANO_DOMINICO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPLATANO_DOMINICO" class="ventanaFlotante">
+        <a href="javascript:closePLATANO_DOMINICO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Platano Dominico</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenSANDIA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoSANDIA" class="ventanaFlotante">
+        <a href="javascript:closeSANDIA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Sandia</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPEPINO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPEPINO" class="ventanaFlotante">
+        <a href="javascript:closePEPINO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Pepino</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenJICAMA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoJICAMA" class="ventanaFlotante">
+        <a href="javascript:closeJICAMA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Jicama</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPIÑA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPIÑA" class="ventanaFlotante">
+        <a href="javascript:closePIÑA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Piña</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMELON_CHINO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMELON_CHINO" class="ventanaFlotante">
+        <a href="javascript:closeMELON_CHINO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Melón Chino</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMELON_BLANCO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMELON_BLANCO" class="ventanaFlotante">
+        <a href="javascript:closeMELON_BLANCO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Melón Blanco</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenDURAZNO" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoDURAZNO" class="ventanaFlotante">
+        <a href="javascript:closeDURAZNO()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Durazno</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenDURAZNO_NECTARIN" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoDURAZNO_NECTARIN" class="ventanaFlotante">
+        <a href="javascript:closeDURAZNO_NECTARIN()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Durazno Nectarin</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANZANA_GALA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANZANA_GALA" class="ventanaFlotante">
+        <a href="javascript:closeMANZANA_GALA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Manzana Gala</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANZANA_DELICIA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANZANA_DELICIA" class="ventanaFlotante">
+        <a href="javascript:closeMANZANA_DELICIA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Manzana Delicia</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANZANA_GOLDEN" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANZANA_GOLDEN" class="ventanaFlotante">
+        <a href="javascript:closeMANZANA_GOLDEN()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Manzana Golden</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANZANA_AMARILLA_MX" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANZANA_AMARILLA_MX" class="ventanaFlotante">
+        <a href="javascript:closeMANZANA_AMARILLA_MX()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Manzana Amarilla Mx</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenMANZANA_ROJA_MX" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoMANZANA_ROJA_MX" class="ventanaFlotante">
+        <a href="javascript:closeMANZANA_ROJA_MX()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Manzana Roja Mx</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenAGUACATE" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoAGUACATE" class="ventanaFlotante">
+        <a href="javascript:closeAGUACATE()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Aguacate</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenUVA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoUVA" class="ventanaFlotante">
+        <a href="javascript:closeUVA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Uva</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenTUNA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoTUNA" class="ventanaFlotante">
+        <a href="javascript:closeTUNA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Tuna</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenGUAYABA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoGUAYABA" class="ventanaFlotante">
+        <a href="javascript:closeGUAYABA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Guayaba</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenPERA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoPERA" class="ventanaFlotante">
+        <a href="javascript:closePERA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Pera</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenFRESA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoFRESA" class="ventanaFlotante">
+        <a href="javascript:closeFRESA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Fresa</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCAÑA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCAÑA" class="ventanaFlotante">
+        <a href="javascript:closeCAÑA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Caña</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<div id="OpenCIRUELA" class="fondoFlotante"> <!-- FONDO y abrir() -->
+    <div id="InfoCIRUELA" class="ventanaFlotante">
+        <a href="javascript:closeCIRUELA()">
+                <span id="cerrar" class="fa fa-close"> </span>
+        </a>
+        <p>
+            <h4>Ciruela</h4>
+            <form action=""  class="formProducts" >
+                <label class="form-label">
+                    Agregar los Precios del Producto: 
+                </label>
+                <br>
+                <input type="number" size="16px" id="Kilo" class="form-input" pattern="[0-9]+" placeholder="Precio por Kilo">
+                <br>
+                <input type="number" size="16px" id="Minereo" class="form-input" pattern="[0-9]+" placeholder="Precio por Minoreo (Caja)">
+                <br>
+                <input type="number" size="16px" id="Mayoreo" class="form-input" pattern="[0-9]+" placeholder="Precio por Mayoreo">
+                <br>
+                <label class="form-label">
+                selecciona habilitar o desabilitar Producto: 
+                </label>
+                <br>
+                <input type="submit" id="Aceptar" class="Aceptar" value="Aceptar">
+            </form>
+        </p>
+    </div><!-- FIN DE LA INFO DEL BOTÓN -->
+</div> <!-- FIN DEL FONDO OSCURO DEL BOTÓN -->
+
+<!---------- FIN de Registro de Precio de Producto ---------->
+
+
+</body>
+</html>

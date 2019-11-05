@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- permite tener una interfaz para tamaños de mobiles -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+	<!-- hace a conexion del css3 -->
+	<link rel="stylesheet" type="text/css" href="css/Estilo_Login.css">
+	
+	<title>LOGIN Empleado</title>
+</head>
+<body>
+
+	<br>
+
+	<div class="contenedor">
+		<!-- action hace a conexion con la BASE DE DATOS para REVISAR los datos y ACCEDER al usuario Empleado registrado -->
+		<form action=""  class="form">
+			<div class="form-header">
+				<h1 class="form-title">Inicio de Sección Empleado</h1>
+			</div>
+
+			<!-- permite ingresar una etiqueta -->
+			<label for="text" class="form-label">nombre de caja: </label>
+			<!-- permite ingresar desde el teclado -->
+			<!-- required permite hacer que sea necesariamente llenado-->
+			<input type="text" id="correo" class="form-input" required placeholder="Escriba su Nombre de caja">
+
+			<!-- permite ingresar una etiqueta -->
+			<label for="password" class="form-label">password: </label>
+			<!-- permite ingresar desde el teclado -->
+			<input type="password" id="password" class="form-input" required placeholder="Escriba su password">
+
+			<!-- permite crear un boton con su nombre de etiqueta (value="name")-->
+			<input type="submit" class="btn-submit" value="Aceptar">
+			<br>
+			<br>
+			<br>
+			<form action=""> <!--aqui manda una notificación al Administrador para mandar nueva contraseña a la caja que es -->
+				<input type="submit" class="btn-submit" value="Olvide Contraseña">
+			</form>
+		</form>
+	</div>
+</body>
+</html>

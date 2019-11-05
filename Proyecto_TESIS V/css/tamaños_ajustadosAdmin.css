@@ -1,0 +1,1439 @@
+/*----------------------- inicio reset -----------------------*/
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*----------------------- FIN reset -----------------------*/
+
+
+
+
+/* (^_^) (^_^) (^_^) (^_^) INICIO DE ESTILOS DE VISTA ADMIN (^_^) (^_^) (^_^) (^_^) */
+
+/*codicional para expecificar flexibilidad y ocultamiento de titulos del menu*/
+@media screen and (max-width: 861px) {
+	ul.tabs li{
+		width: none; /*crea la ceparación de los elementos del menu*/
+		flex-basis: 0; /*permite decirle que tenga un ancho de 0*/
+		flex-grow: 1; /*permite decirle que tome el mismo espacio*/
+	}
+
+	/*acomodo del boton Ayuda*/
+	ul.tabs-titulosBtn li{
+	    width: none;
+		flex-basis: 0;
+		flex-grow: 1
+	}
+}
+
+@media screen and (max-width: 450px) {
+	ul.tabs li a{
+		padding: 15px 0;
+	}
+	ul.tabs li a .txt_menu{
+		display: none;	
+	}
+
+	.secciones article{
+		padding: auto;
+	}
+	
+	/* estilo del btn Ayuda */
+	ul.tabs-titulosBtn li a{
+	    padding: 5px;
+	    font-size:15px;
+	    width: 2px 40px;
+	}
+	.tabs-titulosBt .btn_emergente .icon-home{
+	    padding:auto 50px;
+	    float:flex;
+	}
+	ul.tabs-titulosBtn li a .txt_title{
+	    display:none;
+	}
+	
+	/*estilo para los títulos de las ventanas */
+	.saludo{
+	    font-size:17px;
+	    float:flex;
+	    text-align: center;
+	}
+}
+
+/*---------------------------------- SEPARACIÓN ----------------------------------*/
+/*diseño para el titulo y diseño del icono visible MENU*/
+@media screen and (max-width: 250px) {
+	/*estilo del boton ayuda con titulo */
+	ul.tabs-titulosBtn{
+	    width: 100%;
+	    list-style: none;
+	    display:flex;
+	    font-size: 16px;
+	}
+	ul.tabs-titulosBtn li{
+	    width:0%;
+	    text-align:center;
+	}
+	ul.tabs-titulosBtn li a{
+	    text-decoration:none;
+	    color:#EC7F00;
+	    font-size:15px;
+	    display: block;
+	    padding: auto 30px;
+		text-align: center;
+		font-family: Roboto;
+	    border-radius:8px;
+	}
+	/* estilo del boton ayuda */
+	.btn_emergente a{
+	    color:red;
+	    text-decoration: none;
+	    font-size: 14px;
+	    max-width:5px auto;
+	    display: block;
+	    
+	    padding: 10px 20px;
+	    text-align: center;
+	    font-family: Roboto;
+	}
+}
+
+/*---------------------------------- SEPARACIÓN ----------------------------------*/
+				/* INICIO de Tamaños para el buscador */
+@media screen and (max-width: 1343px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: 70%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: 95%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+@media screen and (max-width: 1128px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: 70%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: 95%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+@media screen and (max-width: 1131px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: 70%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: 95%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+@media screen and (max-width: 1128px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: -2%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: 95%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+@media screen and (max-width: 800px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: -2%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: -39%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+@media screen and (max-width: 250px) {
+	/*estilo del cuadro del buscador*/
+	.form .form-bucador{
+		font-size: 16px;
+		border-radius:5px;
+		float:flex;
+		margin-left: -8%;
+		text-align: left;
+	}
+	/*estilo del botón Buscar*/
+	.wrap .form .btn-buscar{
+		font-size: 16px;
+		border-radius:4px;
+		float:flex;
+		margin-left: -39%;
+		text-align:center;
+		cursor: pointer;
+		border: 0px;
+		margin: 2px 2px;
+		padding: 2px 10px;
+	}
+}
+				/* FIN de Tamaños para el buscador */
+/*---------------------------------- SEPARACIÓN ----------------------------------*/
+		/* ESTILO PARA ETIQUETAS Y INPUT (INGRESAR DATOS) */
+@media screen and (max-width: 368px) {
+    .form input{
+        font-size: 14px;
+        float: center;
+        border-radius:4px;
+    }
+    .form label{
+        float: center;
+        font-size:14px;
+        text-align: center;
+        
+    }
+}
+
+		/* ocultación de letras del icono de ayuda y acomodo del contenido */
+@media screen and (max-width: 450px) {
+    .txt_title{
+        display:none;
+    }
+
+	li .btn_emergente{
+		float:left;
+	}
+}
+
+		/* cuadro de ayuda -> estilo de ventanas emergentes de ayuda*/*/
+@media screen and (max-width: 613px){
+	/*estilo de ventanas emergentes de ayuda*/
+		.btn_emergente{
+			float: left;
+		}
+}
+
+
+/*---------------------------------- SEPARACIÓN ----------------------------------*/
+		/* ESTILO PARA cuadro de registros pantalla 2 */
+@media screen and (max-width: 1125px){
+	.form{
+		margin: auto;
+	}
+	div.cajas_registradas{
+		margin-right: 12%;
+		width: 800px;
+		height: 400px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	.titulosRegistro{
+	display: inline-flex;
+	width: 30%;
+	height: 25px;
+	padding-left: 35px;
+	font-size: 18px;
+	}
+	.form{
+		margin: auto;
+	}
+	div.cajas_registradas{
+		margin: auto;
+		background: rgba(0, 0, 0, .4);
+		border: .5px solid #ff851b;
+		border-radius: 8px;
+		width: 700px;
+		height: 400px;
+	}
+	
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 720px){
+	.titulosRegistro{
+	width: 30%;
+	height: 25px;
+	padding-left: 16px;
+	font-size: 18px;
+	}
+	.form{
+		margin: auto;
+	}
+	div.cajas_registradas{
+		width: 80%;
+		height: 400px;
+		margin: auto;
+		border-radius: 8px;
+	}
+	div .cajas_registradas .form-label{
+		margin: auto; /* centra horizontalmente*/
+		margin-top: 4%;
+		font-size: 18px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 683px){
+	.titulosRegistro{
+	display: inline-flex;
+	width: 30%;
+	height: 25px;
+	padding-left: 16px;
+	font-size: 18px;
+	}
+	.form{
+		margin: auto;
+	}
+	div .cajas_registradas{
+		margin: auto;
+		background: rgba(0, 0, 0, .4);
+		border: .5px solid #ff851b;
+		border-radius: 8px;
+		width: 60%;
+		height: 400px;
+	}
+	div .cajas_registradas .form-label{
+		margin: auto; /* centra horizontalmente*/
+		margin-top: 4%;
+		font-size: 18px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.titulosRegistro{
+	width: 30%;
+	height: 25px;
+	padding-left: 16px;
+	font-size: 18px;
+	}
+	.form{
+		margin: auto;
+	}
+	div .cajas_registradas{
+		margin: auto;
+		border-radius: 8px;
+		width: 90%;
+		height: 400px;
+	}
+	div .cajas_registradas .form-label{
+		margin: auto; /* centra horizontalmente*/
+		margin-top: 4%;
+		font-size: 18px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 613px){
+	h3{
+		font-size: 28px;
+	}
+	.titulosRegistro{
+	display: inline-flex;
+	width: auto;
+	margin: auto;
+	height: 25px;
+	font-size: 26px;
+	}
+	.form{
+		margin: auto;
+	}
+	div.cajas_registradas{
+		margin: auto;
+		background: rgba(0, 0, 0, .4);
+		border: .5px solid #ff851b;
+		border-radius: 8px;
+		width: 90%;
+		height: 400px;
+	}
+	div .cajas_registradas .form-label{
+		margin: auto; /* centra horizontalmente*/
+		margin-top: 4%;
+		font-size: 18px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 500px){
+	.contenedorRegistro{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		text-align: center;
+	}
+
+	div .form-label{
+		width: 100%;
+		margin: auto; /* centra horizontalmente*/
+	}
+
+	div .form-label .cajas_registradas{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		height: 300px;
+	}
+
+	h3{
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		font-size: 22px;
+	}
+	.titulosRegistro{
+		text-align: center;
+		margin: auto;
+		font-size: 18px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width: 400px){
+	.contenedorRegistro{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		text-align: center;
+	}
+
+	div .form-label{
+		width: 100%;
+		margin: auto; /* centra horizontalmente*/
+	}
+
+	div .form-label .cajas_registradas{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		height: 300px;
+	}
+
+	h3{
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		font-size: 18px;
+	}
+	.titulosRegistro{
+		margin: auto;
+		text-align: center;
+		width: auto;
+		font-size: 14px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width: 395px){
+	.contenedorRegistro{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		text-align: center;
+	}
+
+	div .form-label{
+		width: 100%;
+		margin: auto; /* centra horizontalmente*/
+	}
+
+	div .form-label .cajas_registradas{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		height: 300px;
+	}
+
+	h3{
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		font-size: 20px;
+	}
+	.titulosRegistro{
+		margin: auto;
+		text-align: center;
+		font-size: 14px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width: 350px){
+	.contenedorRegistro{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		text-align: center;
+	}
+
+	div .form-label{
+		width: 100%;
+		margin: auto; /* centra horizontalmente*/
+	}
+
+	div .form-label .cajas_registradas{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		height: 300px;
+	}
+
+	h3{
+		margin: auto;
+		text-align: center;
+		width: 100%;
+		font-size: 15px;
+	}
+	.titulosRegistro{
+		margin: auto;
+		text-align: center;
+		width: auto;
+		font-size: 12px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 10px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px auto;
+	}
+}
+
+@media screen and (max-width: 300px){
+	.contenedorRegistro{
+		width: 100%;
+		margin: auto;
+	}
+
+	h3{
+		width: 100%;
+		text-align: center;
+	}
+
+	div .form-label{
+		width: 100%;
+	}
+
+	div .form-label .cajas_registradas{
+		margin: auto; /* centra horizontalmente*/
+		width: 100%;
+		height: 200px;
+		text-align: center;
+	}
+
+	.titulosRegistro{
+		margin: auto;
+		width: auto;
+		text-align: center;
+		padding: 2px;
+		display: inline-flex;
+		font-size: 13px;
+	}
+
+	/* Botones Elimar y Actualizar */
+	.update{
+		margin: 5px;
+	}
+}
+
+@media screen and (max-width: 261px){
+	.contenedorRegistro{
+		margin: auto;
+		width: 100%;
+	}
+	.form-label h3{
+		width: 100%; 
+		text-align: center;
+	}
+
+	.cajas_registradas{
+		width: 90%;
+		height: 250px;
+	}
+	.titulosRegistro{
+		margin: auto;
+		font-size: 10px;
+	}
+}
+
+
+
+
+/* * * * * * * * * * * tamaños solo para pantallas * * * * * * * * * * */
+@media screen and (max-width: 1125px){
+	Tamaños DE PANTALLAS
+	.secciones{
+		
+	}
+/*
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 800px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 100vh;
+	}
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 720px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 130vh;
+	}
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 683px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 640px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 613px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 75vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 500px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 100vh;
+	}
+	.secciones #cajas{
+		min-height: 80vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 400px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 80vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 395px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 80vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 350px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 80vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 330px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 120vh;
+	}
+	.secciones #cajas{
+		min-height: 80vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 316px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 170vh;
+	}
+	.secciones #cajas{
+		min-height: 70vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 300px){
+	/*Tamaños DE PANTALLAS
+	.secciones #inicio{
+			min-height: 170vh;
+	}
+	.secciones #cajas{
+		min-height: 70vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+@media screen and (max-width: 261px){
+	.secciones #inicio{
+			min-height: 270vh;
+	}
+	.secciones #cajas{
+		min-height: 90vh;
+	}
+
+	.secciones #almacen{}
+
+	.secciones #ventas{}
+}
+*/
+
+/* (^_^) (^_^) (^_^) (^_^) FIN DE ESTILOS DE VISTA ADMIN (^_^) (^_^) (^_^) (^_^) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* (^_^) (^_^) (^_^) (^_^) ESTILOS DE LA TABLA (^_^) (^_^) (^_^) (^_^) */
+@media screen and (max-width: 1280px) {
+	/*---------- INICIO estilo de titulos de separación ----------*/*/
+	h1{
+		margin: auto;
+		text-align: center;
+		margin-top: 8px;
+		color: #B5E3FA;/*#533979;*/
+		margin-bottom: 8px;
+		display: none;
+	}
+	/*---------- FIN estilo de titulos de separación ----------*/
+
+
+    .contenedor_Fruta{
+        margin: auto;
+		padding-bottom: 20px;/*margen de abajo*/
+		padding-top: 20px;/*margen de arriba*/
+		padding-left: -20px;/*margen de la izquierda*/
+		width: 50%;
+		height: 100%;
+    }
+    /*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+	.contenedor_Verdura{
+    margin: auto;
+	padding-bottom: 20px;/*margen de abajo*/
+	padding-top: 20px;/*margen de arriba*/
+	padding-left: -20px;/*margen de la izquierda*/
+	width: 50%;
+	height: 100%;
+    }
+    /*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+
+	/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+	.tex{/*efecto de letras en pantalla grande*/
+		text-decoration: none;
+		font-size: 12px;
+		text-align: center;
+		display: inline-block;
+		overflow: hidden;
+	}
+	/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+
+	/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+	.element_product{
+		margin: auto;
+		margin-top: 3px; /*da una ligera separacion a los elementos*/
+		width: 85px; /* dibujado de hanchura del recuadro */
+		height: 85px; /* dibujado de altura del recuadro */
+		background-color: rgba(0, 0, 0, .3); /*color de bondo degradado;*/
+		padding-bottom: 2px; /*da un espaciado de abajo*/
+
+		border-radius: 20PX;
+		text-align: center;
+		color: black;
+	}
+	.image_product{ /*estilo de la img_product ajustada al cuadro*/
+		width: 100%;
+		height: 85px;
+		border-radius: 20PX;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+
+	/*----------------------- INICIO efecto de la imagen -----------------------*/
+
+	.element_product img:hover{/*efecto de tamaño de imagen en pantalla grande*/
+		width: 100%;
+		height: 60px;
+		border-bottom: 3px solid #ff851b; /* color de franja color de la letra */
+	/*----------------------- FIN efecto de la imagen -----------------------*/
+	}
+
+		/*inicio de desocultar las flechas y ocultar una TABLA de las 2*/
+@media screen and (max-width: 800px) {
+	/*---------- INICIO estilo de titulos de separación ----------*/*/
+	h1{
+		margin: auto;
+		text-align: center;
+		margin-top: 8px;
+		color: #B5E3FA;
+		margin-bottom: 8px;
+	}
+
+	/*EStilo del div contenedor de los divs Fruta / Verdura */
+	div #General{
+		width: 100%;
+	}
+	/*---------- FIN estilo de titulos de separación ----------*/
+    	
+		
+
+
+
+
+
+
+
+
+    
+	/*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+	div #General{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.Text_FlechaIZQ{ /*Flecha para dirigirse a Verduras */
+		display: block;
+		float: left;
+	}
+    div #TablaFruta{
+        margin: auto;
+		max-width: 100%;
+		display: block;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+
+	.Text_FlechaDER{ /*Flecha para dirigirse a Frutas */
+		display: none;
+		float: right;
+	}
+	div #TablaVerdura{
+	    margin: auto;
+		max-width: 100%;
+		display: none;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+    /*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+
+
+
+
+
+
+
+
+	/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+	.tex{/*efecto de letras en pantalla grande*/
+		text-decoration: none;
+		font-size: 16px;
+		text-align: center;
+		display: inline-block;
+		overflow: hidden;
+	}
+	/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+
+	/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+	.element_product{
+		margin: 4px 4px;
+		width: 90px; /* dibujado de hanchura del recuadro */
+		height: 90px; /* dibujado de altura del recuadro */
+		border-radius: 15PX;
+	}
+	td{
+		margin: auto; /*centra todas las celdas*/
+		width: 100%; /* dibujado de hanchura del recuadro */
+		height: 100%; /* dibujado de altura del recuadro */
+		border: none;
+	}
+	.image_product{ /*estilo de la img_product ajustada al cuadro*/
+		width: 90px;
+		height: 90px;
+		align-items: center;
+		position: static;
+		border-radius: 15PX;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	td:hover{/*efecto color y fondo universal*/
+		font-size: 12px;
+		display: inline-block;/* centra la letra en la parte de bajo de la img*/
+		border-radius: 10PX;
+	}
+	td h4:hover{/*efecto de tamaño de imagen en pantalla grande*/
+		align-items: center;
+		border-radius: 10PX;
+		text-align: center;
+		overflow: hidden;
+		display: block;
+		cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+	}
+	/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+}
+
+
+@media screen and (max-width: 777px) {
+	/*---------- INICIO estilo de titulos de separación ----------*/*/
+	h1{
+		margin: auto;
+		text-align: center;
+		margin-top: 8px;
+		color: #B5E3FA;
+		margin-bottom: 8px;
+	}
+
+	/*EStilo del div contenedor de los divs Fruta / Verdura */
+	div #General{
+		width: 100%;
+	}
+	/*---------- FIN estilo de titulos de separación ----------*/
+    	
+		
+
+
+
+
+
+
+
+
+    
+	/*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+	div #General{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.Text_FlechaIZQ{ /*Flecha para dirigirse a Verduras */
+		display: block;
+		float: left;
+	}
+    div #TablaFruta{
+        margin: auto;
+		max-width: 100%;
+		display: block;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+
+	.Text_FlechaDER{ /*Flecha para dirigirse a Frutas */
+		display: none;
+		float: right;
+	}
+	div #TablaVerdura{
+	    margin: auto;
+		max-width: 100%;
+		display: none;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+    /*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+
+
+
+
+
+
+
+
+	/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+	.tex{/*efecto de letras en pantalla grande*/
+		text-decoration: none;
+		font-size: 14px;
+		text-align: center;
+		display: inline-block;
+		overflow: hidden;
+	}
+	/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+
+	/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+	.element_product{
+		margin: 4px 4px;
+		width: 90px; /* dibujado de hanchura del recuadro */
+		height: 90px; /* dibujado de altura del recuadro */
+		border-radius: 15PX;
+	}
+	td{
+		margin: auto; /*centra todas las celdas*/
+		width: 100%; /* dibujado de hanchura del recuadro */
+		height: 100%; /* dibujado de altura del recuadro */
+		border: none;
+	}
+	.image_product{ /*estilo de la img_product ajustada al cuadro*/
+		width: 90px;
+		height: 90px;
+		align-items: center;
+		position: static;
+		border-radius: 15PX;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	td:hover{/*efecto color y fondo universal*/
+		font-size: 12px;
+		display: inline-block;/* centra la letra en la parte de bajo de la img*/
+		border-radius: 10PX;
+	}
+	td h4:hover{/*efecto de tamaño de imagen en pantalla grande*/
+		align-items: center;
+		border-radius: 10PX;
+		text-align: center;
+		overflow: hidden;
+		display: block;
+		cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+	}
+	/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+}
+
+
+@media screen and (max-width: 700px) {
+	/*---------- INICIO estilo de titulos de separación ----------*/*/
+	h1{
+		margin: auto;
+		text-align: center;
+		margin-top: 8px;
+		color: #B5E3FA;
+		margin-bottom: 8px;
+	}
+
+	/*EStilo del div contenedor de los divs Fruta / Verdura */
+	div #General{
+		width: 100%;
+	}
+	/*---------- FIN estilo de titulos de separación ----------*/
+    	
+
+
+
+
+
+
+
+
+
+	/*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+	div #General{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.Text_FlechaIZQ{ /*Flecha para dirigirse a Verduras */
+		display: block;
+		float: left;
+	}
+    div #TablaFruta{
+        margin: auto;
+		max-width: 100%;
+		display: block;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+
+	.Text_FlechaDER{ /*Flecha para dirigirse a Frutas */
+		display: none;
+		float: right;
+	}
+	div #TablaVerdura{
+	    margin: auto;
+		max-width: 100%;
+		display: none;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+    /*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+
+
+
+
+
+
+
+
+	/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+	.tex{/*efecto de letras en pantalla grande*/
+		text-decoration: none;
+		font-size: 13px;
+		text-align: center;
+		display: inline-block;
+		overflow: hidden;
+	}
+	/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+
+	/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+	.element_product{
+		margin: 4px 4px;
+		width: 90px; /* dibujado de hanchura del recuadro */
+		height: 90px; /* dibujado de altura del recuadro */
+		border-radius: 15PX;
+	}
+	td{
+		margin: auto; /*centra todas las celdas*/
+		width: 100%; /* dibujado de hanchura del recuadro */
+		height: 100%; /* dibujado de altura del recuadro */
+		border: none;
+	}
+	.image_product{ /*estilo de la img_product ajustada al cuadro*/
+		width: 90px;
+		height: 90px;
+		align-items: center;
+		position: static;
+		border-radius: 15PX;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	td:hover{/*efecto color y fondo universal*/
+		font-size: 12px;
+		display: inline-block;/* centra la letra en la parte de bajo de la img*/
+		border-radius: 10PX;
+	}
+	td h4:hover{/*efecto de tamaño de imagen en pantalla grande*/
+		align-items: center;
+		border-radius: 10PX;
+		text-align: center;
+		overflow: hidden;
+		display: block;
+		cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+	}
+	/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+}
+
+@media screen and (max-width: 560px) {
+	/*---------- INICIO estilo de titulos de separación ----------*/*/
+	h1{
+		margin: auto;
+		text-align: center;
+		margin-top: 8px;
+		color: #B5E3FA;
+		margin-bottom: 8px;
+	}
+
+	/*EStilo del div contenedor de los divs Fruta / Verdura */
+	div #General{
+		width: 100%;
+	}
+	/*---------- FIN estilo de titulos de separación ----------*/
+    
+	/*----------------------- INICIO margenes de div's de elementos verdura y fruta ----------------------*/
+	div #General{
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.Text_FlechaIZQ{ /*Flecha para dirigirse a Verduras */
+		display: block;
+		float: left;
+	}
+    div #TablaFruta{
+        margin: auto;
+		max-width: 100%;
+		display: block;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+
+	.Text_FlechaDER{ /*Flecha para dirigirse a Frutas */
+		display: none;
+		float: right;
+	}
+	div #TablaVerdura{
+	    margin: auto;
+		max-width: 100%;
+		display: none;
+		margin: 0px 30px;
+		padding: 8px;
+    }
+    /*----------------------- FIN margenes de div's de elementos verdura y fruta ----------------------*/
+    
+	/*----------------------- INICIO estilo de nombre de la fruta -----------------------*/
+	.tex{/*efecto de letras en pantalla grande*/
+		text-decoration: none;
+		font-size: 14px;
+		text-align: center;
+		display: inline-block;
+		overflow: hidden;
+	}
+	/*----------------------- FIN estilo de nombre de la fruta -----------------------*/
+
+	/*----------------------- INICIO dibujado del recuadro para la tabla -----------------------*/
+	.element_product{
+		margin: 4px 4px;
+		width: 90px; /* dibujado de hanchura del recuadro */
+		height: 90px; /* dibujado de altura del recuadro */
+		border-radius: 15PX;
+	}
+	td{
+		margin: auto; /*centra todas las celdas*/
+		width: 100%; /* dibujado de hanchura del recuadro */
+		height: 100%; /* dibujado de altura del recuadro */
+		border: none;
+	}
+	.image_product{ /*estilo de la img_product ajustada al cuadro*/
+		width: 90px;
+		height: 90px;
+		align-items: center;
+		position: static;
+		border-radius: 15PX;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	td:hover{/*efecto color y fondo universal*/
+		font-size: 12px;
+		display: inline-block;/* centra la letra en la parte de bajo de la img*/
+		border-radius: 10PX;
+	}
+	td h4:hover{/*efecto de tamaño de imagen en pantalla grande*/
+		align-items: center;
+		border-radius: 10PX;
+		text-align: center;
+		overflow: hidden;
+		display: block;
+		cursor: pointer; /* TIPO DE CURSOR (MANITA)*/
+	}
+	/*----------------------- FIN dibujado del recuadro para la tabla -----------------------*/
+}
+
+
+@media screen and (max-width: 250px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* (^_^) (^_^) (^_^) (^_^) FIN DE ESTILOS DE LA TABLA (^_^) (^_^) (^_^) (^_^) */
+
+
+/* (^_^) (^_^) (^_^) (^_^) INICIO DE ESTILOS DE MENSAJE AYUDA (^_^) (^_^) (^_^) (^_^) */
+@media screen and (max-width: 320px){
+	.titulosRegistro{
+	display: inline-flex;
+	width: 30%;
+	height: 25px;
+	padding-left: 58px;
+	}
+	div.cajas_registradas{
+		margin: auto;
+		background: rgba(0, 0, 0, .4);
+		border: .5px solid #ff851b;
+		border-radius: 8px;
+		width: 300px;
+		height: 500px;
+	}
+	div .cajas_registradas .form-label{
+		margin: auto; /* centra horizontalmente*/
+		margin-top: 4%;
+	}
+}
+
+/* (^_^) (^_^) (^_^) (^_^) FIN DE ESTILOS DE MENSAJE AYUDA (^_^) (^_^) (^_^) (^_^) */
+

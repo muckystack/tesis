@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><!-- Permite crear un efecto RESPOSIVE -->
+
+    <title>Compra Nueva de producto</title>
+
+<!-- Ultima versión de la libreria JQuery
+    <script src="http://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+-->
+<!--llamado de la libreria Jquery-->
+<script src="../../JS/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../css/Estilos Boostrap/bootstrap.min.css">
+<!--llamado de la libreria Boostrap Online->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"-->
+    
+    <!--Scritp de funcionalidad de Busqueda, iNSERCCION, ACTUALIZACION Y ELIMINACIÓN DE DATOS  (controlador)-->
+        <script src="../../JS/aplication.js"></script>
+
+    <!--Estilos para menu pegable y fondo-->
+    <link rel="stylesheet" href="../../css/Estilo_Admin.css">
+    <!--Estilos para tabla producto-->
+    <link rel="stylesheet" href="../../css/estiloProductos_tabla.css">
+    <!-- enlaza el archivo css de los iconos -->
+    <link rel="stylesheet" href="../../Iconos/font-awesome.css">
+
+</head>
+<body class="bg-dark">
+
+
+
+
+<div class="container">
+    <div class="row"><!-- Inicio row -->
+        <div class="col-md-6 bg-dark"> <!--col-md-5 espacio horizontal del Formulario de 4 de 12 -->
+            <div class="card bg-dark">
+
+                <nav class="navbar navbar-expand-lg  form-control-sm"><!--INICIO NAVEGACION-->
+                    <ul class="navbar-nav navbar-expand-lg p-1">
+                        <!-- botón de Busqueda -->
+                        <a href="../Vista_AdministradorINICIO.html" type="submit" class="btn btn-outline-danger my-2 my-sm-0">
+                            Regresar
+                        </a>
+                    </ul>
+
+                    <div class="navbar-expand-lg ml-1"><!--ml-auto-->
+                        <h3 style="color: #6109E5/*#170535*/" align="center">
+                            Nueva compra y proveedor
+                        </h3>
+                    </div>
+                </nav><!--FIN NAVEGACION-->
+                <br>
+                <form id="formProveedor" class="formProveedor form-control-xl" method="POST">
+                    <input type="hidden" id="taskId">
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="text" size="25px" id="NombreProveedor" name="NombreProveedor" class="form-control" placeholder="Nombre del Proveedor: *">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="text" size="30px" id="TelefonoProveedor" name="TelefonoProveedor" class="form-control" placeholder="Ingresa un Telefono de 7 - 10 digitos: *">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="text" size="31px" id="RFCProveedor" name="RFCProveedor" class="form-control" placeholder="RFC del Proveedor:">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="text" size="25px" id="CiudadProveedor" name="CiudadProveedor" class="form-control" placeholder="Nombre del lugar: *">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 <-->
+                            <input type="email" size="31px" id="CorreoProveedor" name="CorreoProveedor" class="form-control" placeholder="Correo electrónico del Proveedor:">
+                        </div>
+                    </div>
+                    
+<!--INGRESO DE DATOS EN TABLA Compras-->
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 <-->
+                            <ul style="color: white">Hora de Compra del nuevo producto: *
+                                <input type="time" size="31px" id="HoraCompra" name="HoraCompra" class="form-control">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 <-->
+                            <ul style="color: white">Fecha de Compra del nuevo producto: *
+                                <input type="date" size="31px" id="FechaCompra" name="FechaCompra" class="form-control">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <br>
+                    
+<!--INGRESO DE DATOS EN TABLA Detalle Compras-->
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="number" size="31px" id="CostoUnidad" name="CostoUnidad" class="form-control" placeholder="Costo por Unidad de producto Comprado: *">
+                        </div>
+                    </div>
+
+<!--INGRESO DE DATOS EN TABLA Producto-->
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="text" size="31px" id="NombreProducto" name="NombreProducto" class="form-control" placeholder="Nombre del producto Comprado al Proveedor: *">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="number" size="31px" id="CostoAdquisición" name="CostoAdquisición" class="form-control" placeholder="Precio de adquisición de Comprado nuevo: *"> 
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="number" size="31px" id="CostodeVenta" name="CostodeVenta" class="form-control" placeholder="Precio estimado para vender el nuevo Producto: *">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <input type="number" size="31px" id="KilosComprados" name="KilosComprados" class="form-control" placeholder="Kilos comprados de Producto al Proveedor: *">
+                        </div>
+                    </div>
+
+                    <div class="form-group form-control-sm">
+                        <div class="col-md-12"><!--espacio horizontal de 4 de 12 -->
+                            <select id="ListaTrueFalse" name="ListaTrueFalse" class="form-control" placeholder="Selecciona un Rol">
+                            <option value="">
+                                Seleccione una Opción de las que aparecen: * 
+                            </option>
+                                <option value="1">
+                                    Habilitar
+                                </option>
+                                <option value="0">
+                                    Deshabilitar
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <ul class=" error" id="error"></ul> <!-- arroja las listas de completar -->           
+                      
+                    <div style="margin: auto" class="col-md-11 form-control-lg"> 
+                        <div class="row">
+
+                        <button href="UserNuevo.php" id="btnSaveProvee" name="btnSaveProvee" type="submit" class="btn btn-´rimary btn-block  text-center btn btn-outline-info">
+                            Guardar Proveedor y Nueva Compra
+                        </button>          
+                        
+                        </div> <!-- row -->
+                    </div> <!-- col-md-* -->
+                </form>
+            </div>
+        </div><!--col-md-6 espacio horizontal del Formulario de 4 de 12 -->
+
+<!--script que llama el archivo de comprobación de llenado-->
+        <!--script src="JS/Validar_Proveedor.js"></script-->
+
+        <div class="col-md-6 bg-dark "><!--col-md-7 espacio horizontal del Formulario de 4 de 12 -->
+                <div class="card bg-dark">
+                    <form id="formGasto" class="formGasto" method="POST">
+                        <input type="hidden" id="taskId">
+                        <br>
+                        <br>
+                        <div style="color: #6109E5" align="center">
+                            <h3>
+                                Nuevo Gasto Adicional
+                            </h3>
+                        </div>
+                        <br><br>
+                        <br><br>
+                        <div class="form-group">
+                            <div class="col-md-12"><!--espacio horizontal de 12 -->
+                                <ul style="color: white">Fecha de Gastos Adicionales *:
+                                <input type="date" size="30px" id="GastoFecha" name="GastoFecha" class="form-control">
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12"><!--espacio horizontal de 12 -->
+                                <ul style="color: white">
+                                    Gastos de comidas, gasolina por viaje, gastos de reparación vehicular por dia: *
+                                    
+                                    <input type="number" size="25px" id="GastoExtra" name="GastoExtra" class="form-control" placeholder="Agregar de gastos">
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12"><!--espacio horizontal de 12 -->
+                                <ul style="color: white">Agregar Descripción de gastos: *
+                                    <textarea style="text-align: justify" id="GastoDescripción" name="GastoDescripción" class="form-control" cols="66" rows="3">
+                                    </textarea>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12"><!--espacio horizontal de 12 -->
+                                <input type="number" size="31px" id="GastoTotal" name="GastoTotal" class="form-control" placeholder="Costos totales por dia">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12"><!--espacio horizontal de 12 -->
+                                <button href="#" id="btnSaveGasto" name="btnSaveGasto" type="submit" class="btn btn-´rimary btn-block  text-center btn btn-outline-info">
+                                    Guardar Gastos Adicionales
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!-- FIN row -->
+</div><!-- FIN de ingreso de cajas -->
+
+</body>
+</html>
+
+<!--Script AJAX para proveedor-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#btnSaveProvee').click(function(){
+            var datos = $('#formProveedor').serialize();
+            $.ajax({
+                type:"POST",
+                url:"InserProvee.php",
+                data:datos,
+                success:function(r){
+                    if(r==1){
+                        alert("agregado con exito");
+                    }else{
+
+                        alert("Fallo el server");
+                    }
+                } // succes
+            }); // ajax
+            return false;
+            
+        }); // function click
+    }); // function ready
+</script>
+
+<!--Script AJAX para GastosAdicionales-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#btnSaveGasto').click(function(){
+            var datos = $('#formGasto').serialize();
+            $.ajax({
+                type:"POST",
+                url:"InserGasto.php",
+                data:datos,
+                success:function(r){
+                    console.log(data);
+                    if(r==1){
+                        alert("agregado con exito");
+                    }else{
+                        alert("Fallo el server");
+                    }
+                } // succes
+            }); // ajax
+            return false;
+            
+        }); // function click
+    }); // function ready
+</script>

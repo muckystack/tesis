@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: url("../fondoLogin.jpg");
+	-webkit-background-size: cover; /*permite adaptarse al tamaño de pantalla la img*/
+	background-size: cover; /*permite adaptarse al tamaño de pantalla la img*/
+	background-attachment: fixed;
+}
+
+.contenedor .form .form-header .form-title{
+	font-weight: normal; /* permite tener los titulos en grande pero más delgados*/
+	font-family: sans-serif; 
+	color: white;
+	text-align: center;
+	padding: 14px 0;
+}
+
+.contenedor .form{
+	background: rgba(0,0,0,.6); /*permite la sobra del conetido un tanto degradado de un 60%*/
+	width: 90%;
+	max-width: 650px;
+	margin: auto; /*este permite centrar el contenido*/
+	padding: 5px 35px; /*permite darle un margen de arriba, abajo de 5 y de los lados de 35px*/
+	margin-top: 10px;
+	padding-bottom: 30px;
+	border-radius: 5px;
+}
+
+.contenedor .form .form-label{
+	display: block; /*permite acomodar hacia abajo todos los elementos*/
+	color: #ff851b;
+	font-size: 16px;
+	font-family: Roboto;
+	position: relative;
+}
+
+
+.contenedor .form .form-input{
+	background: rgba(0,0,0,.7); /*permite la sobra del conetido un tanto degradado de un 70%*/
+	border: none; /*permite quitar los bordes de los navegadores por defecto*/
+	outline: none;
+	border-bottom: 2px solid #ff851b;
+	width: 100%;
+	padding: 12px;
+	margin-bottom: 20%;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	font-family: Roboto;
+
+}
+
+.contenedor .form{
+	resize: vertical;
+	max-height: 1024px;
+	min-height: 50px;
+}
+
+.contenedor .form .btn-submit{
+	width: 100%;
+	font-family: Roboto;
+	outline: none;
+	background: #ff851b;
+	font-size: 18px;
+	border:none;
+	color: #fff;
+	padding: 10px 0px;
+	cursor: pointer;
+	transition: all .5s ease;/*permite dar una tardansa de cambio de color a todos en 5 segndos*/
+	border-radius: 10px;
+}
+
+/*permite dar la animacion cuando pasa el cursor por ensima*/
+.contenedor .form .btn-submit:hover{
+	background: #FDE4CF;
+	color: #227406;
+	font-size: 20px;
+}
