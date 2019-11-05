@@ -1,0 +1,20 @@
+<!-- Documento CSS-->
+form {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+}
+input[type=textfield] {
+    width: 150px;
+    padding: 16px 32px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 1px;
+    text-align: left;
+    color: #333;
+    background: #E1E1E1;
+}
+
+<!-- Finaliza codigo calculadora CSS-->

@@ -50,11 +50,11 @@ function obtenerDatos(){
 		url: 'consultaUser.php',
 		type: 'GET',
 		success: function(response)	{
-		    console.log(response); // Muestra lo que recibe del php Backend
+		    //console.log(response); // Muestra lo que recibe del php Backend
 
 		    //rellenar la tabla tbady con el id = "tasks"
 		    const tasks = JSON.parse(response);
-		    console.log(tasks);
+		    //console.log(tasks);
 
 		    let template = '';
 
@@ -65,7 +65,7 @@ function obtenerDatos(){
 			   			<tr taskId="${task.id}">
 							<td>${task.id}</td>
 							<td>
-								<a href="#" class="selecUpdate btn btn-outline-info">
+								<a href="#" class="selecUpdate form-control btn btn-outline-info">
 									${task.Nombre}
 								</a>
 							</td>
@@ -75,7 +75,7 @@ function obtenerDatos(){
 								<td>${task.Rol}     </td>
 								<td>${task.Salario} </td>
 								<td>
-									<button class="btnEliminar btn btn-danger">
+									<button class="btnEliminar form-control btn btn-outline-danger">
 										Eliminar
 									</button>
 							</td>
@@ -83,7 +83,7 @@ function obtenerDatos(){
 			`}); // forEach
 
 			$('#tasks').html(template);
-			console.log(template);
+			//console.log(template);
 		} // success
 	}); // ajax
 }// FIN obtenerDatos()
@@ -136,12 +136,12 @@ function obtenerDatos(){
 
 			$('#taskId').val(task.id);
 
-			$('#nombre').val(task.nombre);
-			$('#apellido').val(task.apellido);
-			$('#telefono').val(task.telefono);
-			$('#password').val(task.paswwor);
-            $('#rol').val(task.rol);
-            $('#salario').val(task.salario);
+			$('#nombre').val(task.Nombre);
+			$('#apellido').val(task.Npellido);
+			$('#telefono').val(task.Telefono);
+			$('#password').val(task.Password);
+            $('#rol').val(task.Rol);
+            $('#salario').val(task.Salario);
 
             //aqui cambia la variable edit a true
             edit = true;
