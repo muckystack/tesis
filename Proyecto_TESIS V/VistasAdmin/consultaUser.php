@@ -1,7 +1,7 @@
 <?php // php para crear lista de consultas y mostrar en tabla
 
 // consulta a la base de datos
-  include('conexionGeneral.php');
+include('conexionGeneral.php');
 
 mysqli_set_charset($connection, "utf8");
   

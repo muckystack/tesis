@@ -29,26 +29,23 @@ if (isset($ _POST['submit'])) { // SI EXISTE LOS CAMPOS
 }
 */
 
-	contraseña autocrementable
+	// contraseña autocrementable
 		$Nombre  =$_POST["nombre"];
 		$Apellido=$_POST["apellido"];
 		$Telefono=$_POST["telefono"];
-		$Password=sha1$_POST["password"]; // sha1 encripta los datos al eviarlos
+		$Password=$_POST["password"]; // sha1 encripta los datos al eviarlos
 		$Rol	 =$_POST["rol"];
 		$Salario =$_POST["salario"];
 
-		$insertarDatos $insertarDatos = "INSERT INTO usuarios (nombre, apellido, telefono, password, rol, pago_semanal) VALUES(	
+		$insertarDatos = "INSERT INTO usuarios (nombre, apellido, telefono, password, rol, pago_semanal) VALUES(	
 														'$Nombre',
 														'$Apellido',
 														'$Telefono',
 														'$Password',
 														'$Rol',
 														 $Salario)";
-if ($insertarDatos == true) {
-	alert("Agregado con exito");
-}else{
-	alert("Fallo al agregar Usuario");
-}
+		
+	$result = mysqli_query($connection, $insertarDatos);
 		//echo mysql_query($conexion, $sql); //arroja los valosres si 1 se conecto y 0 si NO se conecto
 
 ?>
